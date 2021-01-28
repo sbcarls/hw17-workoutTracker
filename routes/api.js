@@ -6,7 +6,8 @@ router.get("/api/workouts", (req,res) => {
   Workout.find({})
     .then((data) => {
       res.json(data)
-    }).catch((err) => res.json(err.message));
+    })
+    .catch((err) => res.json(err.message));
 });
 
 // posts a new workout
